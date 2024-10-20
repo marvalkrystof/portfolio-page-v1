@@ -3,14 +3,12 @@ import ContentBox from './ContentBox'
 import {Experience} from './ExperienceCard'
 import ExperienceCard from './ExperienceCard'
 
-import ewok from '../assets/ewok.jpg'
 import ascii_art_pengu from '../assets/ascii_art_pengu.png'
 import banking_app from '../assets/banking_app.png'
 import knapsack_problem from '../assets/knapsack.png'
 import car_crash_estimator from '../assets/car_crash_estimator.png'
 import portfolio from '../assets/portfolio.png'
 import linkIcon from '../assets/chain-icon.svg'
-import HeaderTag from './HeaderTag'
 
 export interface ContentProps {
   refs: {
@@ -156,7 +154,7 @@ function Content({refs} : ContentProps) {
                         />
                     ))
                 }
-    <a href="https://google.com" target="_blank">
+    <a href="CV.pdf" target="_blank">
     <div className='group flex gap-3 transition rounded p-2 items-center hover:bg-content-background-hover hover:-translate-y-1 hover:text-background-complementary duration-300'>
     <p className='text-xl'>Get CV here</p>
     <img className="w-6 h-6 group-hover:animate-bounce ease-in" src={linkIcon}></img>
