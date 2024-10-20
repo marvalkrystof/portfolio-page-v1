@@ -77,7 +77,7 @@ const projects : Array<Experience> = [
   },
 {
   image_path : knapsack_problem,
-  project_name: "0-1 Knapsack-Problem four ways",
+  project_name: "0-1 Knapsack-Problem",
   description: "Tried solving the NP-complete problem using 4 different approaches. 1. Bruteforce, 2. Bruteforce with paralelization, 3. Using dynamic programming, 4. Using distributed programming (master/slave architecture)",
   project_link: "https://github.com/marvalkrystof/0-1-Knapsack-Problem---four-ways",
   technologies: ['C#', 'Bruteforce', 'Paralelization', 'Dynamic programming', 'Distributed programming']
