@@ -14,7 +14,9 @@ export default {
       "content-background-hover" : "rgba(99,114,115,0.3)",
       "background" : "rgba(36, 1, 75, 1)",
       "background-opacity" : "rgba(36, 1, 75, 0.8)",
-      "background-complementary" : "#8500e6"
+      "background-complementary" : "rgba(133, 0, 230, 1)",
+      "background-complementary-opacity" : "rgba(133, 0, 230, 0.6)",
+      
     }
     },
   },

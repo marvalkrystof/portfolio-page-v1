@@ -63,7 +63,7 @@ function ExperienceCard(props: Experience) {
             </span>
           )          
           : props.image_path && window.width >= 768 ? (
-            <img className="mt-1 w-10/12 h-16 border-solid border-2 border-gray-700 rounded-lg" src={props.image_path}></img>
+            <img className="mt-1 w-28 h-16 border-solid border-2 border-gray-700 rounded-lg" src={props.image_path}></img>
           )
           : 
           props.date  ? (
@@ -101,7 +101,7 @@ function ExperienceCard(props: Experience) {
               <ExperienceAbility key={index} name={element} />
             ))}
           </div>
-          {props.image_path && window.width < 768 && <img className="mt-8 w-1/2 border-solid border-2 border-gray-700 rounded-lg" src={props.image_path}></img>}
+          {props.image_path && window.width < 768 && <img className="mt-8 h-20 w-36 border-solid border-2 border-gray-700 rounded-lg" src={props.image_path}></img>}
         </div>
       </div>
       </a>
