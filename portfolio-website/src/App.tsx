@@ -1,45 +1,18 @@
-import './index.css'
-import Sidebar from './components/Sidebar'
-import Content from './components/Content'
+import "./index.css";
+import Sidebar from "./components/Sidebar";
+import Content from "./components/Content";
 
-import { useRef } from 'react'
+import { useRef } from "react";
 
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { type Container, type ISourceOptions, MoveDirection, OutMode } from "@tsparticles/engine";
-// import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+import {
+  type Container,
+  type ISourceOptions,
+  MoveDirection,
+  OutMode,
+} from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
-
-
-// function App() {
-
-//   const aboutRef = useRef<HTMLDivElement | null>(null);
-//   const experienceRef = useRef<HTMLDivElement | null>(null);
-//   const educationRef = useRef<HTMLDivElement | null>(null);
-//   const projectsRef = useRef<HTMLDivElement | null>(null);
-
-  
-//   const refs = {
-//     about: aboutRef,
-//     experience: experienceRef,
-//     education: educationRef,
-//     projects: projectsRef,
-//   };
-
-//   return (
-//     <>
-//     <div className='flex justify-center w-full h-full'>
-//       <div className='w-10/12'>
-//         <Sidebar refs={refs}></Sidebar>
-//         <Content refs={refs}></Content>
-//       </div>
-    
-//     </div>
-//     </>
-//   )
-// }
 
 const App = () => {
   const [init, setInit] = useState(false);
@@ -73,9 +46,9 @@ const App = () => {
       fpsLimit: 144,
       interactivity: {
         events: {
-          onClick:{
+          onClick: {
             enable: true,
-            mode: "repulse"
+            mode: "repulse",
           },
           onHover: {
             enable: true,
@@ -88,15 +61,15 @@ const App = () => {
           },
           repulse: {
             distance: 200,
-            duration: 2
-          }
+            duration: 2,
+          },
         },
       },
       particles: {
         color: {
           value: "#ffffff",
         },
-        
+
         links: {
           color: "#ffffff",
           distance: 150,
@@ -132,7 +105,7 @@ const App = () => {
       },
       detectRetina: true,
     }),
-    [],
+    []
   );
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const experienceRef = useRef<HTMLDivElement | null>(null);
@@ -140,32 +113,33 @@ const App = () => {
   const projectsRef = useRef<HTMLDivElement | null>(null);
   const certifiactionsRef = useRef<HTMLDivElement | null>(null);
 
-    const refs = {
+  const refs = {
     about: aboutRef,
     experience: experienceRef,
     education: educationRef,
     projects: projectsRef,
-    certifications : certifiactionsRef
+    certifications: certifiactionsRef,
   };
 
   if (init) {
     return (
       <>
-    <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={options} />
-    <div className='flex justify-center w-full h-full relative'>
-      <div className='md:w-10/12 text-gray-300'>
-        <Sidebar refs={refs}></Sidebar>
-        <Content refs={refs}></Content>
-      </div>
-    </div>
+        <Particles
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={options}
+        />
+        <div className="flex justify-center w-full h-full relative">
+          <div className="md:w-10/12 text-gray-300">
+            <Sidebar refs={refs}></Sidebar>
+            <Content refs={refs}></Content>
+          </div>
+        </div>
       </>
-
-    )
+    );
   }
-
 
   return <></>;
 };
 
-
-export default App
+export default App;

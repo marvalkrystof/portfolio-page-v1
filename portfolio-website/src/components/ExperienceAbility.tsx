@@ -1,21 +1,17 @@
-import '../index.css'
-
+import "../index.css";
 
 interface Ability {
-    name : string
+  name: string;
 }
 
-
-
-function ExperienceAbility(props : Ability) {
-
+function ExperienceAbility(props: Ability) {
   return (
     <>
-    <div className="border border-transparent text-white rounded-2xl pl-2 pr-2 bg-background-complementary-opacity text-base">
-    {props.name}
-    </div>
+      <div className="border border-transparent text-white rounded-2xl pl-2 pr-2 bg-background-complementary-opacity text-base">
+        {props.name}
+      </div>
     </>
-  )
+  );
 }
 
-export default ExperienceAbility
+export default ExperienceAbility;
