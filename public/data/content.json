@@ -1,0 +1,284 @@
+{
+  "workExperiences": [
+     {
+      "start_date": "JULY 2025",
+      "end_date": "NOW",
+      "position_name": "Software Engineer",
+      "institution_name": "MSD Czech Republic",
+      "description": "I joined the Applied research and innovation team, where I worked on various internal projects related to experimental chemistry. My role involved developing software solutions to support research activities and collaborating with scientists. Main software engineering tasks included designing and implementing applications, optimizing existing codebases and DevOps.",
+      "technologies": [
+        "AWS",
+        "Terraform",
+        "GitHub Actions",
+        "DevOps",
+        "CI/CD",
+        "IaaC",
+        "Docker",
+        "Git",
+        "Python",
+        "Streamlit",
+        "pandas",
+        "HPC",
+        "Machine Learning",
+        "SQL",
+        "Confluence",
+        "JIRA"
+      ]
+    },
+    {
+      "start_date": "JUNE 2024",
+      "end_date": "JULY 2025",
+      "position_name": "Data Engineer",
+      "institution_name": "Direct Fidoo",
+      "description": "I joined the company at the start of the Data Lake integration and worked closely with the main Data Engineer. I created and managed data pipelines using ADF, wrote custom Python scripts that were run on Azure Batch service, and prepared custom export solutions in XSLT for the Fidoo app. My biggest achievement was implementing a custom logging solution, which included everything from the logging library to the final Power BI report, providing crucial insights into our script runs.",
+      "technologies": [
+        "Azure",
+        "Python",
+        "pandas",
+        "SQL",
+        "pyarrow",
+        "Azure Data Factory",
+        "Azure Batch",
+        "Git",
+        "JIRA",
+        "Power BI",
+        "Azure Data Lake",
+        "CosmosDB",
+        "XSLT"
+      ]
+    },
+    {
+      "start_date": "NOV 2022",
+      "end_date": "JUNE 2024",
+      "position_name": "SOC Analyst",
+      "institution_name": "NN IT Hub",
+      "description": "It was my responsibility to monitor, review, and respond to security alerts and incidents, ensuring the timely identification of potential threats, analyzing suspicious activities, and implementing appropriate remediation measures to safeguard the organization's network and data.",
+      "technologies": [
+        "Splunk/SPL",
+        "Azure AD",
+        "MS Defender",
+        "KQL",
+        "Git",
+        "OSINT",
+        "Networking",
+        "IDS/IPS",
+        "ServiceNow"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "start_date": "SEP 2023",
+      "end_date": "NOW",
+      "position_name": "Data Analytics",
+      "institution_name": "VŠE FIS",
+      "description": "A 3.5-year degree with a strong emphasis on practical application over theory, highlighted by a mandatory internship in the final semester. One-third of the courses are taught in English. The curriculum focuses on foundational statistics, machine learning methods, and various data-related disciplines",
+      "technologies": [
+        "Python",
+        "PHP",
+        "Statistic methods and Probability theory",
+        "Calculus and Linear Algebra",
+        "Machine Learning",
+        "Basics of Economics and Accounting",
+        "Database design",
+        "NLP",
+        "Big Data",
+        "BI",
+        "Algorithmization and Data Structures"
+      ]
+    },
+    {
+      "start_date": "SEP 2019",
+      "end_date": "MAY 2023",
+      "position_name": "IT",
+      "institution_name": "SPŠE Ječná",
+      "description": "Learned a bit of everything ranging from databases, networks, operating systems, and programming. This gave me a great base knowledge, which I used to further develop my skills. Mostly took interest in programming. Graduated with straight A's.",
+      "technologies": [
+        "Database design",
+        "OOP Programming",
+        "Webdev",
+        "Java",
+        "C#",
+        "HTML/CSS",
+        "SQL",
+        "Linux",
+        "Python",
+        "JavaScript",
+        "Application Architecture",
+        "Embedded",
+        "Networking"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "image_path": "images/uta.png",
+      "project_name": "UTA",
+      "description": "Bachelor thesis project. Python implementation of the UTA (UTilites Additives) family of algorithms for multi-criteria decision analysis. UTA learns additive utility functions from preference rankings supplied by a decision maker. The project includes the backend solver implemented with a scikit-learn interface and a Streamlit-based frontend for user interaction.",
+      "project_link": "https://github.com/marvalkrystof/UTA",
+      "technologies": [
+        "Python",
+        "Streamlit",
+        "scipy",
+        "numpy",
+        "scikit-learn",
+        "pandas",
+        "REST",
+        "Make"
+      ]
+    },
+      {
+      "image_path": "images/book_recommender.png",
+      "project_name": "Book Recommender",
+      "description": "Basic book recommender system built using various NLP techniques (embeddings, cosine similarity, cross encoder, FAISS index). User discribes a book they would like and the system return top N recommendations. The backend is built in Python and the frontend is built using Streamlit.",
+      "project_link": "https://github.com/marvalkrystof/Book-Recommender-System",
+      "technologies": [
+        "Python",
+        "Streamlit",
+        "scipy",
+        "Hugging Face",
+        "FAISS",
+        "NLP",
+        "pandas",
+        "REST"
+      ]
+    },
+      {
+      "image_path": "images/event_reservation_system.png",
+      "project_name": "Event Reservation System",
+      "description": "Developed a full-stack Event Reservation System in PHP, MySQL, and Bootstrap with role-based admin tools, interactive seat selection, timed reservations to prevent double booking, checkout flow, and QR-based e-tickets with email delivery.",
+      "project_link": "https://github.com/marvalkrystof/Event-Reservation-System",
+      "technologies": [
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "HTML/CSS",
+        "Apache",
+        "MVC",
+        "Bootstrap",
+        "User access control"
+      ]
+    },
+
+     {
+      "image_path": "images/book_inventory.png",
+      "project_name": "Bookstore Inventory Backend",
+      "description": "Built as an interview project, the bookstore inventory management system is a basic REST API with CRUD operations and access control using JWT.",
+      "project_link": "https://github.com/marvalkrystof/bookstore_inventory_be",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
+        "Docker",
+        "Docker Compose",
+        "REST",
+        "JWT"
+      ]
+    },
+    {
+      "image_path": "images/sw_logo.png",
+      "project_name": "Star Wars Encyclopedia",
+      "description": "A simple Star Wars encyclopedia with a search feature. Serves as a practice for working with APIs, React and MUI.",
+      "project_link": "https://marvalkrystof-sw-encyclopedia.netlify.app/",
+      "technologies": [
+        "React",
+        "Material-UI",
+        "Typescript",
+        "REST",
+        "Responsive design"
+      ]
+    },
+    {
+      "image_path": "images/portfolio.png",
+      "project_name": "Portfolio Site",
+      "description": "Mainly serves the purpose of a portfolio and frontend developent practice.",
+      "project_link": "https://github.com/marvalkrystof/portfolio-page-v1",
+      "technologies": [
+        "React",
+        "Tailwind",
+        "Typescript"
+      ]
+    },
+    {
+      "image_path": "images/car_crash_estimator.png",
+      "project_name": "DamageSense",
+      "description": "For an extracurricular course I completed at EY, my colleagues and I worked on a data-driven project where we developed a website that estimates car crash costs based on user-provided parameters. We used the Chicago car crash dataset from Kaggle and built the site using Anvil, a Python-based web framework. The cost estimation was powered by various machine learning algorithms on the backend, including neural networks, linear regression, and random forest, which were applied in a binary classification format.",
+      "project_link": "https://github.com/marvalkrystof/car_crash_estimator",
+      "technologies": [
+        "Python",
+        "Machine Learning",
+        "Anvil"
+      ]
+    },
+    {
+      "image_path": "images/knapsack.png",
+      "project_name": "0-1 Knapsack-Problem",
+      "description": "Tried solving the NP-complete problem using 4 different approaches. 1. Bruteforce, 2. Bruteforce with paralelization, 3. Using dynamic programming, 4. Using distributed programming (master/slave architecture)",
+      "project_link": "https://github.com/marvalkrystof/0-1-Knapsack-Problem---four-ways",
+      "technologies": [
+        "C#",
+        "Bruteforce",
+        "Paralelization",
+        "Dynamic programming",
+        "Distributed programming"
+      ]
+    },
+    {
+      "image_path": "images/banking_app.png",
+      "project_name": "Banking App",
+      "description": "For my 4th-year high school project, I developed a banking app with a simple user interface. The app supported key features such as transactions between accounts, basic authentication, account creation, account summaries, scheduling meetings between employees and users, and an admin panel. Its primary purpose was to demonstrate database anomalies that could occur at different transaction isolation levels (e.g., Phantom Reads). The app was built using MVC architecture.",
+      "project_link": "https://github.com/marvalkrystof/Beta3-Banking-App",
+      "technologies": [
+        "MVC",
+        "MsSQL",
+        "ASP.NET",
+        "C#",
+        "Unit Testing",
+        "Logging"
+      ]
+    },
+    {
+      "image_path": "images/ascii_art_pengu.png",
+      "project_name": "ASCII Art Converter",
+      "description": "As my 3rd-year high school project, I developed a CLI ASCII Art Converter app. The program could convert images in various formats into ASCII art, with output options including console display, text format, .png, and HTML. It also supported video inputs, including YouTube links, processing them into ASCII video format. The project is currently stored on Git LFS.",
+      "project_link": "https://github.com/marvalkrystof/Mini_Omega_ASCII_ART_CONVERTER",
+      "technologies": [
+        "C#",
+        "Git LFS",
+        "Image and Video processing",
+        "Encoding"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "institution_name": "Oracle",
+      "certification_name": "Database Design and Programming with SQL",
+      "date": "MAR 2023",
+      "description": "Essentials of database design and architecure and database programming with Oracle DB.",
+      "technologies": [
+        "Database Programming",
+        "Oracle DB",
+        "Database Design"
+      ]
+    },
+    {
+      "institution_name": "Cisco",
+      "certification_name": "NDG Linux Essentials",
+      "date": "DEC 2021",
+      "description": "Basics of Linux operating system.",
+      "technologies": [
+        "Linux"
+      ]
+    },
+    {
+      "institution_name": "Oracle",
+      "certification_name": "Java Foundations",
+      "date": "NOV 2020",
+      "description": "Basics of Java programming.",
+      "technologies": [
+        "Java"
+      ]
+    }
+  ]
+}
