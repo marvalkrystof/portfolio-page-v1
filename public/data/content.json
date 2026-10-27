@@ -170,7 +170,7 @@
       "image_path": "images/inboxed-cover.svg",
       "project_name": "Inboxed",
       "description": "An email organizer that classifies IMAP messages using a locally running Ollama model. CLI and terminal interfaces support reviewing and approving folder, archive, and trash actions, with local history and optional encryption.",
-      "project_link": "https://github.com/marvalkrystof/inboxed",
+      "project_link": "https://inboxed.fyi",
       "technologies": [
         "Python",
         "Ollama",
