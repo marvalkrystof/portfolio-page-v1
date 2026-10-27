@@ -1,6 +1,6 @@
 {
   "workExperiences": [
-     {
+    {
       "start_date": "JULY 2025",
       "end_date": "NOW",
       "position_name": "Software Engineer",
@@ -68,6 +68,21 @@
   ],
   "education": [
     {
+      "start_date": "JUNE 2026",
+      "end_date": "JUNE 2028 (EXPECTED)",
+      "position_name": "Biomedical and Clinical Informatics",
+      "institution_name": "ČVUT FBMI",
+      "description": "A two-year master’s programme specializing in Software Technologies. Focuses on software engineering, biomedical image processing, bioinformatics, and the analysis of biomedical data using machine learning and artificial intelligence.",
+      "technologies": [
+        "Software Engineering",
+        "Biomedical Informatics",
+        "Machine Learning",
+        "Biomedical Image Processing",
+        "Bioinformatics",
+        "Artificial Intelligence"
+      ]
+    },
+    {
       "start_date": "SEP 2023",
       "end_date": "NOW",
       "position_name": "Data Analytics",
@@ -114,7 +129,7 @@
     {
       "image_path": "images/molecule_visualizer-cover.svg",
       "project_name": "Molecule Visualizer",
-      "description": "Built a molecule visualizer from scratch in C using raylib. It loads atom coordinates from XYZ files, colors atoms by element, and identifies bonds using covalent-radius distance checks. Keyboard controls let users orbit the camera to explore the molecular structure.",
+      "description": "A molecule renderer built from scratch in C and raylib. It reads XYZ coordinates, colors atoms by element, infers bonds from covalent radii, and supports keyboard-controlled camera orbiting.",
       "project_link": "https://github.com/marvalkrystof/molecule-visualizer",
       "technologies": [
         "C",
@@ -127,7 +142,7 @@
     {
       "image_path": "images/cvut_menza_detektor-cover.svg",
       "project_name": "ČVUT Menza Detektor",
-      "description": "Built a Python tool that downloads ČVUT cafeteria camera images and detects people using the YOLOv5-CrowdHuman model. It also processes video with a lightweight IoU tracker to maintain person IDs across frames, with configurable detection and tracking thresholds.",
+      "description": "Detects people in ČVUT cafeteria camera images using YOLOv5-CrowdHuman. A lightweight IoU tracker maintains person IDs across video frames, with configurable detection and tracking thresholds.",
       "project_link": "https://github.com/marvalkrystof/cvut-menza-detektor",
       "technologies": [
         "Python",
@@ -142,7 +157,7 @@
     {
       "image_path": "images/c_ann-cover.svg",
       "project_name": "c_ann",
-      "description": "Implemented a single perceptron from scratch in C to explore the foundations of neural networks. The implementation includes random weight initialization, feedforward evaluation, a configurable activation function, and weight and bias updates, demonstrated by training a perceptron to learn the AND function.",
+      "description": "A single perceptron implemented from scratch in C, demonstrated by learning the AND function. Includes feedforward evaluation, configurable activation, weight and bias updates, and manual memory management.",
       "project_link": "https://github.com/marvalkrystof/c_ann",
       "technologies": [
         "C",
@@ -154,7 +169,7 @@
     {
       "image_path": "images/inboxed-cover.svg",
       "project_name": "Inboxed",
-      "description": "Developed a local email organizer that scans messages over IMAP and classifies them using an Ollama model running on the user's machine. CLI and terminal interfaces let users review, edit, and approve proposed folder, archive, and trash actions. Includes local run history and optional encryption of saved activity.",
+      "description": "An email organizer that classifies IMAP messages using a locally running Ollama model. CLI and terminal interfaces support reviewing and approving folder, archive, and trash actions, with local history and optional encryption.",
       "project_link": "https://github.com/marvalkrystof/inboxed",
       "technologies": [
         "Python",
@@ -169,7 +184,7 @@
     {
       "image_path": "images/uta-cover.svg",
       "project_name": "UTA",
-      "description": "Bachelor thesis project. Python implementation of the UTA (UTilites Additives) family of algorithms for multi-criteria decision analysis. UTA learns additive utility functions from preference rankings supplied by a decision maker. The project includes the backend solver implemented with a scikit-learn interface and a Streamlit-based frontend for user interaction.",
+      "description": "My bachelor’s thesis: a Python implementation of UTA algorithms for multi-criteria decision analysis. It learns additive utility functions from preference rankings, with a scikit-learn-compatible solver and a Streamlit interface.",
       "project_link": "https://github.com/marvalkrystof/UTA",
       "technologies": [
         "Python",
@@ -182,10 +197,10 @@
         "Make"
       ]
     },
-      {
+    {
       "image_path": "images/book_recommender-cover.svg",
       "project_name": "Book Recommender",
-      "description": "Basic book recommender system built using various NLP techniques (embeddings, cosine similarity, cross encoder, FAISS index). User discribes a book they would like and the system return top N recommendations. The backend is built in Python and the frontend is built using Streamlit.",
+      "description": "Finds book recommendations from a natural-language description. A Python backend combines embeddings, cosine similarity, FAISS search, and cross-encoder reranking, with a Streamlit interface.",
       "project_link": "https://github.com/marvalkrystof/Book-Recommender-System",
       "technologies": [
         "Python",
@@ -198,10 +213,10 @@
         "REST"
       ]
     },
-      {
+    {
       "image_path": "images/event_reservation_system-cover.svg",
       "project_name": "Event Reservation System",
-      "description": "Developed a full-stack Event Reservation System in PHP, MySQL, and Bootstrap with role-based admin tools, interactive seat selection, timed reservations to prevent double booking, checkout flow, and QR-based e-tickets with email delivery.",
+      "description": "A full-stack reservation system built with PHP, MySQL, and Bootstrap. Includes interactive seat selection, timed reservations to prevent double booking, role-based administration, checkout, and emailed QR e-tickets.",
       "project_link": "https://github.com/marvalkrystof/Event-Reservation-System",
       "technologies": [
         "PHP",
@@ -214,11 +229,10 @@
         "User access control"
       ]
     },
-
-     {
+    {
       "image_path": "images/book_inventory-cover.svg",
       "project_name": "Bookstore Inventory Backend",
-      "description": "Built as an interview project, the bookstore inventory management system is a basic REST API with CRUD operations and access control using JWT.",
+      "description": "A bookstore inventory REST API built as an interview project using Java and Spring Boot. Supports CRUD operations and JWT access control, with PostgreSQL and Docker.",
       "project_link": "https://github.com/marvalkrystof/bookstore_inventory_be",
       "technologies": [
         "Java",
@@ -233,7 +247,7 @@
     {
       "image_path": "images/sw_logo-cover.svg",
       "project_name": "Star Wars Encyclopedia",
-      "description": "A simple Star Wars encyclopedia with a search feature. Serves as a practice for working with APIs, React and MUI.",
+      "description": "A searchable Star Wars encyclopedia built with React, TypeScript, and Material UI. A project exploring API integration and responsive interfaces.",
       "project_link": "https://marvalkrystof-sw-encyclopedia.netlify.app/",
       "technologies": [
         "React",
@@ -246,7 +260,7 @@
     {
       "image_path": "images/car_crash_estimator-cover.svg",
       "project_name": "DamageSense",
-      "description": "For an extracurricular course I completed at EY, my colleagues and I worked on a data-driven project where we developed a website that estimates car crash costs based on user-provided parameters. We used the Chicago car crash dataset from Kaggle and built the site using Anvil, a Python-based web framework. The cost estimation was powered by various machine learning algorithms on the backend, including neural networks, linear regression, and random forest, which were applied in a binary classification format.",
+      "description": "Built with colleagues during an extracurricular course at EY to estimate car crash costs from user inputs. Uses Chicago crash data, an Anvil web interface, and binary classification approaches including neural networks, linear regression, and random forests.",
       "project_link": "https://github.com/marvalkrystof/car_crash_estimator",
       "technologies": [
         "Python",
@@ -257,7 +271,7 @@
     {
       "image_path": "images/knapsack-cover.svg",
       "project_name": "0-1 Knapsack-Problem",
-      "description": "Tried solving the NP-complete problem using 4 different approaches. 1. Bruteforce, 2. Bruteforce with paralelization, 3. Using dynamic programming, 4. Using distributed programming (master/slave architecture)",
+      "description": "Explores four approaches to the 0–1 knapsack problem in C#: brute force, parallel brute force, dynamic programming, and distributed computation. Compares how the same problem can be approached through different execution models.",
       "project_link": "https://github.com/marvalkrystof/0-1-Knapsack-Problem---four-ways",
       "technologies": [
         "C#",
@@ -270,7 +284,7 @@
     {
       "image_path": "images/ascii_art_pengu-cover.svg",
       "project_name": "ASCII Art Converter",
-      "description": "As my 3rd-year high school project, I developed a CLI ASCII Art Converter app. The program could convert images in various formats into ASCII art, with output options including console display, text format, .png, and HTML. It also supported video inputs, including YouTube links, processing them into ASCII video format. The project is currently stored on Git LFS.",
+      "description": "A C# command-line tool that converts images and videos, including YouTube inputs, into ASCII art. Supports console, text, PNG, and HTML output; built as a high-school project and stored using Git LFS.",
       "project_link": "https://github.com/marvalkrystof/Mini_Omega_ASCII_ART_CONVERTER",
       "technologies": [
         "C#",

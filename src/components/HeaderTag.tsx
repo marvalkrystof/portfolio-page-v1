@@ -1,15 +1,3 @@
-interface HeaderTag {
-  text: string;
+export default function HeaderTag({ text, id }: { text: string; id: string }) {
+  return <h2 className="section-heading" id={`${id}-heading`}>{text}</h2>;
 }
-
-function HeaderTag(props: HeaderTag) {
-  return (
-    <>
-      <div className="md:hidden flex w-full h-14 pl-4 sticky top-0 bg-background-opacity items-center backdrop-blur-xl">
-        <div>{props.text}</div>
-      </div>
-    </>
-  );
-}
-
-export default HeaderTag;

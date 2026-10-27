@@ -1,17 +1,3 @@
-import "../index.css";
-
-interface Ability {
-  name: string;
+export default function ExperienceAbility({ name }: { name: string }) {
+  return <li className="technology-tag">{name}</li>;
 }
-
-function ExperienceAbility(props: Ability) {
-  return (
-    <>
-      <div className="border border-transparent text-white rounded-2xl pl-2 pr-2 bg-background-complementary-opacity text-base">
-        {props.name}
-      </div>
-    </>
-  );
-}
-
-export default ExperienceAbility;

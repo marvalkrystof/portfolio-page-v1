@@ -1,20 +1,14 @@
-import "../index.css";
-
-interface SocialIcon {
+interface SocialIconProps {
   filePath: string;
   link: string;
+  label: string;
 }
 
-function SocialIcon(props: SocialIcon) {
+export default function SocialIcon({ filePath, link, label }: SocialIconProps) {
+  const external = link.startsWith("https://");
   return (
-    <>
-      <div className="w-9 h-9 opacity-50 hover:opacity-100 hover:transition hover:duration-400 hover:animate-bounce">
-        <a href={props.link} target="_blank">
-          <img className="w-full h-full" src={props.filePath}></img>
-        </a>
-      </div>
-    </>
+    <a className="social-link" href={link} aria-label={label} title={label} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>
+      <img width="22" height="22" src={filePath} alt="" />
+    </a>
   );
 }
-
-export default SocialIcon;

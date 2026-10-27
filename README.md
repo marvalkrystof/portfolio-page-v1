@@ -9,12 +9,13 @@ This project showcases experience, education, projects, certifications, and soci
 
 ## Features
 
-- Responsive portfolio layout with sticky desktop sidebar and mobile section headers
-- Smooth scrolling navigation between sections (`About`, `Experience`, `Education`, `Projects`, `Certifications`)
-- Interactive section highlighting using `IntersectionObserver`
+- Responsive portfolio layout with a sticky desktop sidebar and sticky mobile navigation
+- Native section links (`About`, `Experience`, `Projects`, `Education`, `Certifications`) with direct-link and browser-history support
+- Active navigation follows the section at the top reading position, including long project lists
 - Animated background powered by `@tsparticles/react`
-- Reusable cards for experience, projects, and certifications
-- Quick access to CV (`public/CV.pdf`) and social/contact links
+- Dedicated project previews and static résumé cards, with expandable technology lists
+- Prominent links to the hosted CV and email, plus labeled social links
+- Keyboard focus states, skip link, reduced-motion scrolling, and content-loading retry
 
 ## Tech Stack
 
@@ -77,7 +78,7 @@ If you fork or rename the repository, update both `homepage` and Vite `base` to 
 
 ```text
 .
-├── public/                 # Static files (favicon, CV, JSON content, images)
+├── public/                 # Static files (favicon, JSON content, images)
 ├── src/
 │   ├── assets/             # Images and icons
 │   ├── components/         # UI components
@@ -100,5 +101,6 @@ If you fork or rename the repository, update both `homepage` and Vite `base` to 
 - Project images referenced by JSON are served from `public/images/`
 - `src/components/Content.tsx` fetches and renders `content.json` at runtime
 - Social links are in `src/components/SidebarSocials.tsx`
-- Section navigation behavior is in `src/components/SidebarNavButton.tsx`
-- Replace `public/CV.pdf` with your own CV file to update the download link
+- Section order and labels are in `src/data/navigation.ts`; active-section behavior is in `src/hooks/useActiveSection.ts`
+- CV and primary contact links are in `src/components/Sidebar.tsx`
+- Shared content types are in `src/types/content.ts`; the JSON structure remains unchanged

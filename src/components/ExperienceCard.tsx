@@ -1,118 +1,19 @@
-import "../index.css";
-import ExperienceAbility from "./ExperienceAbility";
-import linkIcon from "../assets/chain-icon.svg";
-import useWindowDimensions from "../hooks/WindowDimensions";
+import TechnologyList from "./TechnologyList";
+import type { WorkExperience, CertificationExperience } from "../types/content";
 
-interface ExperienceBase {
-  description: string;
-  technologies: Array<string>;
-}
+type Experience = WorkExperience | CertificationExperience;
 
-interface WorkExperience extends ExperienceBase {
-  start_date: string;
-  end_date: string;
-  position_name: string;
-  institution_name: string;
-  project_name?: never;
-  image_path?: never;
-  project_link?: never;
-  date?: never;
-  certification_name?: never;
-}
-
-interface ProjectExperience extends ExperienceBase {
-  project_name: string;
-  image_path: string;
-  project_link: string;
-  start_date?: never;
-  end_date?: never;
-  position_name?: never;
-  institution_name?: never;
-  date?: never;
-  certification_name?: never;
-}
-
-interface CertificationExperience extends ExperienceBase {
-  date: string;
-  certification_name: string;
-  institution_name: string;
-  start_date?: never;
-  end_date?: never;
-  position_name?: never;
-  image_path?: never;
-  project_name?: never;
-  project_link?: never;
-}
-
-type Experience = ProjectExperience | WorkExperience | CertificationExperience;
-
-function ExperienceCard(props: Experience) {
-  const window = useWindowDimensions();
-
+export default function ExperienceCard(props: Experience) {
+  const isWork = "position_name" in props;
+  const title = isWork ? props.position_name : props.certification_name;
+  const date = isWork ? `${props.start_date} — ${props.end_date === "NOW" ? "PRESENT" : props.end_date}` : props.date;
   return (
-    <>
-      <a href={props.project_link} className="w-full" target="_blank">
-        <div className="group flex flex-wrap md:flex-nowrap md:gap-4 mb-1 mt-1 pb-2 pt-2 hover:bg-content-background hover:-translate-x-2 hover:-translate-y-2 rounded transition-all duration-300">
-          <header className="w-full md:w-3/12 md:h-1/2 md:justify-center flex">
-            {props.start_date && props.end_date ? (
-              <span className="mb-2 md:mb-0 text-sm text-gray-400 md:mt-1">
-                {props.start_date} — {props.end_date}
-              </span>
-            ) : props.image_path && window.width >= 768 ? (
-              <img
-                className="mt-1 w-32 h-20 2xl:w-48 2xl:h-28 object-contain bg-[#15141d] border-solid border-2 border-gray-700 rounded-lg"
-                src={props.image_path}
-                alt={`${props.project_name} project preview`}
-                loading="lazy"
-              ></img>
-            ) : props.date ? (
-              <span className="text-sm text-gray-400 mt-1">{props.date}</span>
-            ) : (
-              <p className="hidden">Data Error</p>
-            )}
-          </header>
-          <div className="w-full md:w-9/12">
-            <div className="mb-1 md:mb-0 text-2xl group-hover:text-background-complementary transition-all duration-300 text-white flex items-center gap-2">
-              {props.position_name && props.institution_name ? (
-                <span>
-                  {props.position_name} · {props.institution_name}
-                </span>
-              ) : props.certification_name && props.institution_name ? (
-                <span>
-                  {props.certification_name} · {props.institution_name}
-                </span>
-              ) : props.project_name ? (
-                <span>{props.project_name}</span>
-              ) : (
-                <p className="hidden">Data Error</p>
-              )}
-              {props.project_link && (
-                <img
-                  className="w-4 h-4 group-hover:animate-bounce ease-in"
-                  src={linkIcon}
-                ></img>
-              )}
-            </div>
-            <p className="text-sm text-gray-400">{props.description}</p>
-            <div className="flex flex-wrap gap-2 mt-3">
-              {props.technologies.map((element, index) => (
-                <ExperienceAbility key={index} name={element} />
-              ))}
-            </div>
-            {props.image_path && window.width < 768 && (
-              <img
-                className="mt-8 h-20 w-36 object-contain bg-[#15141d] border-solid border-2 border-gray-700 rounded-lg"
-                src={props.image_path}
-                alt={`${props.project_name} project preview`}
-                loading="lazy"
-              ></img>
-            )}
-          </div>
-        </div>
-      </a>
-    </>
+    <article className="experience-card">
+      <p className="entry-date">{date}</p>
+      <h3>{title}</h3>
+      <p className="entry-institution">{props.institution_name}</p>
+      <p className="entry-description">{props.description}</p>
+      <TechnologyList technologies={props.technologies} label={`${title} at ${props.institution_name}`} />
+    </article>
   );
 }
-
-export default ExperienceCard;
-export type { Experience };

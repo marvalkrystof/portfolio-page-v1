@@ -2,39 +2,32 @@ import "./index.css";
 import Sidebar from "./components/Sidebar";
 import Content from "./components/Content";
 
-import { useRef } from "react";
-
-import { useEffect, useMemo, useState } from "react";
+import { memo, useEffect, useMemo, useState } from "react";
+import SidebarNav from "./components/SidebarNav";
+import useActiveSection from "./hooks/useActiveSection";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
-  type Container,
   type ISourceOptions,
   MoveDirection,
   OutMode,
 } from "@tsparticles/engine";
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import { loadSlim } from "@tsparticles/slim";
+
+// The library reloads its engine whenever its props object changes.
+// Keep section-highlighting updates from re-rendering the particle component.
+const ParticleBackground = memo(Particles);
 
 const App = () => {
   const [init, setInit] = useState(false);
+  const activeSection = useActiveSection();
 
-  // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
       await loadSlim(engine);
-      //await loadBasic(engine);
-    }).then(() => {
-      setInit(true);
+    }).then(() => setInit(true)).catch((error) => {
+      console.error("Unable to initialize particle background:", error);
     });
   }, []);
-
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
 
   const options: ISourceOptions = useMemo(
     () => ({
@@ -107,39 +100,17 @@ const App = () => {
     }),
     []
   );
-  const aboutRef = useRef<HTMLDivElement | null>(null);
-  const experienceRef = useRef<HTMLDivElement | null>(null);
-  const educationRef = useRef<HTMLDivElement | null>(null);
-  const projectsRef = useRef<HTMLDivElement | null>(null);
-  const certifiactionsRef = useRef<HTMLDivElement | null>(null);
-
-  const refs = {
-    about: aboutRef,
-    experience: experienceRef,
-    education: educationRef,
-    projects: projectsRef,
-    certifications: certifiactionsRef,
-  };
-
-  if (init) {
-    return (
-      <>
-        <Particles
-          id="tsparticles"
-          particlesLoaded={particlesLoaded}
-          options={options}
-        />
-        <div className="flex justify-center w-full h-full relative">
-          <div className="md:w-10/12 text-gray-300">
-            <Sidebar refs={refs}></Sidebar>
-            <Content refs={refs}></Content>
-          </div>
-        </div>
-      </>
-    );
-  }
-
-  return <></>;
+  return (
+    <>
+      {init && <ParticleBackground id="tsparticles" options={options} />}
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <div className="portfolio-layout">
+        <Sidebar activeSection={activeSection} />
+        <SidebarNav activeSection={activeSection} mobile />
+        <Content />
+      </div>
+    </>
+  );
 };
 
 export default App;

@@ -1,25 +1,22 @@
-import "../index.css";
-import { ReactNode } from "react";
-import { forwardRef } from "react";
+import type { ReactNode } from "react";
 import HeaderTag from "./HeaderTag";
+import type { SectionId } from "../data/navigation";
 
-const ContentBox = forwardRef<
-  HTMLDivElement,
-  { children: ReactNode; text: string }
->((props, ref) => {
+interface ContentBoxProps {
+  children: ReactNode;
+  text: string;
+  id: SectionId;
+  count?: number;
+}
+
+export default function ContentBox({ children, text, id, count }: ContentBoxProps) {
   return (
-    <>
-      <div className="h-fit">
-        <HeaderTag text={props.text}></HeaderTag>
-        <div
-          ref={ref}
-          className="flex flex-wrap w-full mb-16 rounded-lg p-4 transition-all duration-200 hover:bg-content-background-hover"
-        >
-          {props.children}
-        </div>
+    <section className="content-section" id={id} aria-labelledby={`${id}-heading`}>
+      <div className="section-heading-row">
+        <HeaderTag text={text} id={id} />
+        {count !== undefined && <span className="section-count">{count.toString().padStart(2, "0")}</span>}
       </div>
-    </>
+      <div className="section-content">{children}</div>
+    </section>
   );
-});
-
-export default ContentBox;
+}

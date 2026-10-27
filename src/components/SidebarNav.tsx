@@ -1,22 +1,34 @@
-import "../index.css";
+import { useEffect, useRef } from "react";
 import SidebarNavButton from "./SidebarNavButton";
-import { ContentProps } from "./Content";
+import { sections, type SectionId } from "../data/navigation";
 
-function SidebarNav({ refs }: ContentProps) {
-  return (
-    <>
-      <nav className="hidden md:flex md:w-20 md:h-100 md:flex-col md:flex-wrap md:pt-4">
-        <SidebarNavButton text="About" targetElement={refs.about} />
-        <SidebarNavButton text="Experience" targetElement={refs.experience} />
-        <SidebarNavButton text="Education" targetElement={refs.education} />
-        <SidebarNavButton text="Projects" targetElement={refs.projects} />
-        <SidebarNavButton
-          text="Certifications"
-          targetElement={refs.certifications}
-        />
-      </nav>
-    </>
-  );
+interface SidebarNavProps {
+  activeSection: SectionId;
+  mobile?: boolean;
 }
 
-export default SidebarNav;
+export default function SidebarNav({ activeSection, mobile = false }: SidebarNavProps) {
+  const linksRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!mobile || !linksRef.current) return;
+    const links = linksRef.current;
+    const active = links.querySelector('[aria-current="location"]');
+    if (!active) return;
+    const container = links.getBoundingClientRect();
+    const link = active.getBoundingClientRect();
+    // Only move this horizontal scroller; never change the page's scroll position.
+    if (link.left < container.left) links.scrollLeft += link.left - container.left - 4;
+    else if (link.right > container.right) links.scrollLeft += link.right - container.right + 4;
+  }, [activeSection, mobile]);
+
+  return (
+    <nav className={mobile ? "mobile-nav" : "sidebar-nav"} aria-label="Page sections">
+      <div className="nav-links" ref={linksRef}>
+        {sections.map(({ id, label }) => (
+          <SidebarNavButton key={id} text={label} sectionId={id} active={activeSection === id} />
+        ))}
+      </div>
+    </nav>
+  );
+}

@@ -1,27 +1,24 @@
-import "../index.css";
 import SidebarNav from "./SidebarNav";
 import SidebarSocials from "./SidebarSocials";
-import { ContentProps } from "./Content";
+import type { SectionId } from "../data/navigation";
 
-function Sidebar({ refs }: ContentProps) {
+export default function Sidebar({ activeSection }: { activeSection: SectionId }) {
   return (
-    <>
-      <aside className="pl-2 md:pl-0 flex md:h-dvh md:float-left md:w-5/12 sm:w-full h-100 flex-col flex-nowrap md:top-0 md:sticky pt-16">
-        <div className="group hover:bg-content-background-hover w-fit p-3 rounded-lg duration-300">
-          <h1 className="text-white text-5xl font-bold group-hover:text-background-complementary duration-300">
-            Kryštof Marval
-          </h1>
-          <h2 className="text-white text-xl mt-2">Software Developer</h2>
-          <p className="text-gray-400 text-base mt-5 max-w-xs">
-            I take intererest in every technology under the sun. Sometimes this
-            comes at a cost, but it's incredibly fun!
-          </p>
+    <aside className="sidebar">
+      <div className="sidebar-intro">
+        <p className="eyebrow">Prague, Czech Republic</p>
+        <h1>Kryštof Marval<span className="name-period">.</span></h1>
+        <p className="sidebar-role">Software Developer</p>
+        <p className="sidebar-summary">Building software for research, data, and the things I’m curious about.</p>
+        <div className="intro-actions">
+          <a className="button button-primary" href="https://marvalkrystof.github.io/CV/" target="_blank" rel="noopener noreferrer">
+            View CV <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span>
+          </a>
+          <a className="button button-secondary" href="mailto:marval.krystof@seznam.cz">Email me <span aria-hidden="true">↗</span></a>
         </div>
-        <SidebarNav refs={refs}></SidebarNav>
-        <SidebarSocials></SidebarSocials>
-      </aside>
-    </>
+      </div>
+      <SidebarNav activeSection={activeSection} />
+      <SidebarSocials />
+    </aside>
   );
 }
-
-export default Sidebar;
