@@ -60,8 +60,10 @@ function ExperienceCard(props: Experience) {
               </span>
             ) : props.image_path && window.width >= 768 ? (
               <img
-                className="mt-1 w-32 h-20 2xl:w-48 2xl:h-28 border-solid border-2 border-gray-700 rounded-lg"
+                className="mt-1 w-32 h-20 2xl:w-48 2xl:h-28 object-contain bg-[#15141d] border-solid border-2 border-gray-700 rounded-lg"
                 src={props.image_path}
+                alt={`${props.project_name} project preview`}
+                loading="lazy"
               ></img>
             ) : props.date ? (
               <span className="text-sm text-gray-400 mt-1">{props.date}</span>
@@ -99,8 +101,10 @@ function ExperienceCard(props: Experience) {
             </div>
             {props.image_path && window.width < 768 && (
               <img
-                className="mt-8 h-20 w-36 border-solid border-2 border-gray-700 rounded-lg"
+                className="mt-8 h-20 w-36 object-contain bg-[#15141d] border-solid border-2 border-gray-700 rounded-lg"
                 src={props.image_path}
+                alt={`${props.project_name} project preview`}
+                loading="lazy"
               ></img>
             )}
           </div>

@@ -1,0 +1,106 @@
+{
+  "approach": "Real project screenshots, a real camera frame, repository wireframe, and deterministic SVG reference diagrams. No AI-generated imagery.",
+  "generator": "scripts/build_project_thumbnails.py",
+  "images": [
+    {
+      "path": "public/images/inboxed-cover.svg",
+      "type": "screenshot",
+      "sources": [
+        "https://github.com/marvalkrystof/inboxed/blob/main/promo-video/public/tui/messages-approved.png"
+      ],
+      "note": "Actual Inboxed demo screenshot; sample messages, no synthetic interface."
+    },
+    {
+      "path": "public/images/uta-cover.svg",
+      "type": "screenshot crop",
+      "sources": [
+        "public/images/uta.png",
+        "https://github.com/marvalkrystof/UTA/blob/master/frontend/views.py"
+      ],
+      "note": "Chart detail from the existing UTA application screenshot."
+    },
+    {
+      "path": "public/images/cvut_menza_detektor-cover.svg",
+      "type": "camera frame",
+      "sources": [
+        "https://agata.suz.cvut.cz/jidelnicky/tm-cam-img.php?x=1",
+        "https://github.com/marvalkrystof/cvut-menza-detektor/blob/main/cam_scrape.py"
+      ],
+      "note": "Real public Technická cafeteria camera frame, captured 2026-10-27. No invented detection boxes."
+    },
+    {
+      "path": "public/images/car_crash_estimator-cover.svg",
+      "type": "screenshot",
+      "sources": [
+        "public/images/car_crash_estimator.png",
+        "https://github.com/marvalkrystof/car_crash_estimator/blob/main/README.md"
+      ],
+      "note": "Existing real DamageSense landing-page screenshot, framed without stretching."
+    },
+    {
+      "path": "public/images/event_reservation_system-cover.svg",
+      "type": "repository wireframe crop",
+      "sources": [
+        "https://github.com/marvalkrystof/Event-Reservation-System/blob/main/wireframes/event-viewer.svg"
+      ],
+      "note": "Actual repository seat-selection and checkout wireframe; not a screenshot of the running app."
+    },
+    {
+      "path": "public/images/molecule_visualizer-cover.svg",
+      "type": "coordinate-based diagram",
+      "sources": [
+        "https://github.com/marvalkrystof/molecule-visualizer/blob/main/data/water.xyz"
+      ],
+      "note": "Flat projection of the repository's actual water.xyz coordinates; not an application screenshot."
+    },
+    {
+      "path": "public/images/c_ann-cover.svg",
+      "type": "source-based diagram",
+      "sources": [
+        "https://github.com/marvalkrystof/c_ann/blob/main/perceptron.c"
+      ],
+      "note": "Diagram of the single perceptron and AND training example implemented in perceptron.c."
+    },
+    {
+      "path": "public/images/book_inventory-cover.svg",
+      "type": "source-based endpoint reference",
+      "sources": [
+        "https://github.com/marvalkrystof/bookstore_inventory_be/blob/main/src/main/java/com/krystofmarval/bookstoreinventory/controller/BookController.java"
+      ],
+      "note": "Real endpoint mappings from BookController.java; a reference graphic, not an API execution trace."
+    },
+    {
+      "path": "public/images/book_recommender-cover.svg",
+      "type": "documented architecture diagram",
+      "sources": [
+        "https://github.com/marvalkrystof/Book-Recommender-System/blob/main/README.md",
+        "https://github.com/marvalkrystof/Book-Recommender-System/blob/main/utils.py"
+      ],
+      "note": "Simplified embedding, search, reranking pipeline. Bars illustrate ranked results, not measured scores."
+    },
+    {
+      "path": "public/images/knapsack-cover.svg",
+      "type": "computed example diagram",
+      "sources": [
+        "https://github.com/marvalkrystof/0-1-Knapsack-Problem---four-ways/blob/main/README.md"
+      ],
+      "note": "Computed 0/1 DP table for illustrative weights [2,3,4], values [3,4,5], capacity 7. Not a benchmark."
+    },
+    {
+      "path": "public/images/sw_logo-cover.svg",
+      "type": "existing project artwork",
+      "sources": [
+        "public/images/sw_logo.png"
+      ],
+      "note": "Original Star Wars logo preserved inside the shared dark frame and header, without cropping or stretching."
+    },
+    {
+      "path": "public/images/ascii_art_pengu-cover.svg",
+      "type": "existing project output",
+      "sources": [
+        "public/images/ascii_art_pengu.png"
+      ],
+      "note": "Original ASCII penguin output preserved inside the shared dark frame and header, without cropping or stretching."
+    }
+  ]
+}
