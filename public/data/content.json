@@ -125,7 +125,47 @@
       ]
     }
   ],
+  "competitions": [
+    {
+      "competition_name": "AI Agents for the Rest of Us",
+      "organizer": "AI Tinkerers Prague",
+      "placement": "2nd Place",
+      "date": "NOV 2026",
+      "event_link": "https://luma.com/6rgvg844",
+      "project_name": "Algoshift",
+      "project_link": "https://github.com/marvalkrystof/insidejob-agents-for-rest",
+      "description": "Built Algoshift, a local AI agent that reshapes Instagram Reels around a personal wellbeing profile. It classifies every reel, interacts with content based on your goals, and logs each decision so you can see how your feed changes.",
+      "technologies": [
+        "TypeScript",
+        "LangGraph",
+        "Next.js",
+        "PostgreSQL",
+        "Drizzle",
+        "Patchright",
+        "Featherless AI",
+        "Apify",
+        "Docker"
+      ]
+    }
+  ],
   "projects": [
+    {
+      "image_path": "images/algoshift-cover.svg",
+      "project_name": "Algoshift",
+      "description": "A local AI agent that reshapes your Instagram Reels feed around a personal wellbeing profile. It classifies each reel as more of / feeds / doses / drains, then watches, likes, saves, or skips content accordingly. Every decision is logged with its reason so you can track how the feed changes.",
+      "project_link": "https://github.com/marvalkrystof/insidejob-agents-for-rest",
+      "technologies": [
+        "TypeScript",
+        "LangGraph",
+        "Next.js",
+        "PostgreSQL",
+        "Drizzle",
+        "Patchright",
+        "Featherless AI",
+        "Apify",
+        "Docker"
+      ]
+    },
     {
       "image_path": "images/molecule_visualizer-cover.svg",
       "project_name": "Molecule Visualizer",
@@ -155,18 +195,6 @@
       ]
     },
     {
-      "image_path": "images/c_ann-cover.svg",
-      "project_name": "c_ann",
-      "description": "A single perceptron implemented from scratch in C, demonstrated by learning the AND function. Includes feedforward evaluation, configurable activation, weight and bias updates, and manual memory management.",
-      "project_link": "https://github.com/marvalkrystof/c_ann",
-      "technologies": [
-        "C",
-        "Machine Learning",
-        "Perceptron",
-        "Memory Management"
-      ]
-    },
-    {
       "image_path": "images/inboxed-cover.svg",
       "project_name": "Inboxed",
       "description": "An email organizer that classifies IMAP messages using a locally running Ollama model. CLI and terminal interfaces support reviewing and approving folder, archive, and trash actions, with local history and optional encryption.",
@@ -179,6 +207,18 @@
         "Typer",
         "SQLite",
         "Encryption"
+      ]
+    },
+    {
+      "image_path": "images/c_ann-cover.svg",
+      "project_name": "c_ann",
+      "description": "An implementation of artificial neural networks (ANNs) from scratch in C. Includes feedforward evaluation, configurable activation functions, weight and bias updates, and manual memory management.",
+      "project_link": "https://github.com/marvalkrystof/c_ann",
+      "technologies": [
+        "C",
+        "Machine Learning",
+        "Neural Networks",
+        "Memory Management"
       ]
     },
     {

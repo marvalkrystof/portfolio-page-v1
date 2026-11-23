@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import ContentBox from "./ContentBox";
+import CompetitionCard from "./CompetitionCard";
 import ExperienceCard from "./ExperienceCard";
 import ProjectCard from "./ProjectCard";
 import { sections } from "../data/navigation";
 import type { ContentData } from "../types/content";
 
 const emptyContentData: ContentData = {
-  workExperiences: [], education: [], projects: [], certifications: [],
+  workExperiences: [], education: [], projects: [], competitions: [], certifications: [],
 };
 
 function validateContent(value: unknown): value is ContentData {
@@ -16,6 +17,7 @@ function validateContent(value: unknown): value is ContentData {
     workExperiences: ["start_date", "end_date", "position_name", "institution_name"],
     education: ["start_date", "end_date", "position_name", "institution_name"],
     projects: ["image_path", "project_name", "project_link"],
+    competitions: ["competition_name", "organizer", "placement", "date", "event_link", "project_name", "project_link"],
     certifications: ["institution_name", "certification_name", "date"],
   };
   return Object.entries(required).every(([key, fields]) => {
@@ -129,6 +131,10 @@ export default function Content() {
       <ContentBox id="projects" text="Projects" count={status === "ready" ? contentData.projects.length : undefined}>
         {placeholder("projects")}
         {contentData.projects.map((project) => <ProjectCard key={project.project_link} project={project} />)}
+      </ContentBox>
+      <ContentBox id="competitions" text="Competitions">
+        {placeholder("competitions")}
+        {contentData.competitions.map((competition) => <CompetitionCard key={`${competition.competition_name}-${competition.date}`} competition={competition} />)}
       </ContentBox>
       <ContentBox id="education" text="Education">
         {placeholder("education")}

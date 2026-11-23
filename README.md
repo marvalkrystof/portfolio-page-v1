@@ -5,7 +5,7 @@ This project showcases experience, education, projects, certifications, and soci
 
 ## Live Site
 
-`https://marvalkrystof.github.io/portfolio-page-v1/`
+`https://krystofmarval.fyi/`
 
 ## Features
 
@@ -59,12 +59,11 @@ Vite will start the development server (typically at `http://localhost:5173`).
 
 ## Deployment
 
-This repository is configured for GitHub Pages deployment:
+This repository is configured for GitHub Pages deployment on the custom domain `krystofmarval.fyi`:
 
-- `vite.config.ts` uses `base: "/portfolio-page-v1/"`
-- `package.json` includes:
-  - `"homepage": "https://marvalkrystof.github.io/portfolio-page-v1/"`
-  - deployment scripts using `gh-pages`
+- `vite.config.ts` uses `base: "/"`, so assets are served from the domain root
+- `package.json` sets `homepage` to `https://krystofmarval.fyi/`
+- `public/CNAME` contains the custom domain and is copied into the deployment build
 
 Deploy with:
 
@@ -72,7 +71,7 @@ Deploy with:
 npm run deploy
 ```
 
-If you fork or rename the repository, update both `homepage` and Vite `base` to match your new GitHub Pages path.
+The `CNAME` file configures the custom domain on the `gh-pages` branch. In GitHub, verify the domain under **Settings → Pages**, then enable **Enforce HTTPS** once GitHub has issued the certificate.
 
 ## Project Structure
 

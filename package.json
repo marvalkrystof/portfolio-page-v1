@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://marvalkrystof.github.io/portfolio-page-v1/",
+  "homepage": "https://krystofmarval.fyi/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

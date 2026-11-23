@@ -85,6 +85,8 @@ strong { font-weight: 500; color: var(--text); }
 h3 { margin: 0; color: var(--text); font-size: 21px; font-weight: 500; line-height: 1.35; letter-spacing: -0.02em; overflow-wrap: anywhere; }
 .entry-date { margin: 0 0 9px; color: var(--muted); font-size: 11px; letter-spacing: 0.08em; }
 .entry-institution { margin: 5px 0 0; color: var(--accent); font-size: 15px; }
+.competition-event-link:hover { color: var(--text); text-decoration: underline; text-underline-offset: 4px; }
+.competition-event-link > span[aria-hidden] { display: inline-block; padding-left: 8px; }
 .entry-description { margin: 12px 0 0; }
 .project-card { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
 .project-preview { display: block; align-self: start; width: 100%; max-width: 320px; aspect-ratio: 8 / 5; overflow: hidden; border-radius: 7px; border: 1px solid #4c3c60; background: #15141d; }
